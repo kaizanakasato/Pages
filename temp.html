@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.row{
+			width: 500px;
+			margin: 10px auto;
+		}
+		
+		.row > h3{
+			display: block;
+			background: skyblue;
+			color: white;
+			font-weight: 900;
+			text-align: center;
+			padding: 5px;
+			margin: 20p;
+			font-size: 18pt;
+		}
+		
+		.row > p{
+			text-align: center;
+			font-size: 60pt;
+			color: green;
+			margin: 0;
+			line-height: 60px;
+		}
+		
+		.Genre{
+			width: 500px;
+			margin: auto;
+		}
+		
+		.Genre > .row{
+			float: left;
+			width: calc(470px/3);
+			margin: 5px;
+		}
+		
+		.Genre > .row > p{
+			font-size: 35pt;
+		}
+	</style>
+</head>
+<body class="Performance">
+	<div class="row">
+		<h3>総合成績</h3>
+		<p>70%</p>
+	</div>
+	
+	<div class="Genre">
+		<div class="row">
+			<h3>テクノロジ</h3>
+			<p>70%</p>
+		</div>
+		<div class="row">
+			<h3>マネジメント</h3>
+			<p>70%</p>
+		</div>
+		<div class="row">
+			<h3>ストラテジ</h3>
+			<p>70%</p>
+		</div>
+	</div>
+</body>
+</html>
