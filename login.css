@@ -38,7 +38,7 @@ input[type="textbox"],input[type="password"]{
 	border: solid 2px grey; 
 }
 
-input[type="submit"]{
+.Login{
 	display: block;
 	width: 250px;
 	padding: 15px 55px;
@@ -60,10 +60,13 @@ a:checked{
 	color: dimgrey
 }
 
-p{
+.NotID{
 	padding: 10px;
 	background: lightgrey;
 	padding: 10px;
 	width: 150px;
 	margin: 100px auto 20px auto;
+	border-style: none;
+	color: darkslategrey;
+	font-weight: 500px;
 }
