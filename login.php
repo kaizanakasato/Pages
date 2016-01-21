@@ -5,8 +5,6 @@
 	if($_POST['login']){
 		$userid = htmlspecialchars($_POST['userid'], ENT_QUOTES);
 		$passwd = htmlspecialchars($_POST['passwd'], ENT_QUOTES);
-		$userid = '150000';
-		$passwd = 'test';
 		
 		// Mysqlへ接続
 		$sqlConn = mysql_connect('localhost', 'worker', 'test');
@@ -30,8 +28,9 @@
 	
 	// ゲストボタンが押された
 	else if($_POST['guest']){
-		$userid = 'guest@guest.com';
+		$userid = '000000';
 		$passwd = 'guest';
+		$_SESSION['userName'] = 'Guest';
 		$_SESSION['login'] = 2;
 		header('Location: top.php');
 	}

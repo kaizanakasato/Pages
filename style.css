@@ -291,3 +291,35 @@ footer{
     width: 950px;
 	margin: auto;  
 }
+
+/* UserName */
+
+.userName > form > input{
+	display: block;
+	width: 200px;
+	padding: 15px;
+	margin: 10px auto;
+	color: ghostwhite;
+	box-shadow: 0 0 0 black;
+	border: none;
+	border-radius: 8px;
+	background: none;
+	-webkit-appearance:none;
+	background: cornflowerblue;
+}
+
+/* UserName */
+
+/* Guest */
+
+.GuestLogin{
+	background: cornflowerblue;
+	color: white;
+	text-align: center;
+}
+
+.GuestLogin > p > a{
+	color: lightpink;
+}
+
+/* Guest */

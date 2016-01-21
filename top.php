@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	
 	if(!(($_SESSION['login'] == 1) || ($_SESSION['login'] == 2)))
 		header('Location: not.php');
 ?>
@@ -32,6 +31,19 @@
 
 	<div id="Middle">
 		<aside id="SideMenu">
+			<?php
+				if($_SESSION['login'] == 1){
+					$userName = $_SESSION['userName'];
+					echo <<< EOM
+						<section class="userName">
+							<h4>{$userName}でログイン</h4>
+							<form action="logout.php" method="POST">
+								<input type="submit" value="ログアウト">
+							</form>
+						</section>
+EOM;
+				}
+			?>
 			<section>
 				<h4>ITパスポート過去問題</h4>
 				<ul>
@@ -127,10 +139,5 @@
 	<footer>
 		<small>Copyright &copy; 2016 YSE-Learning, Allrights reserved.</small>
 	</footer>
-	
-	<form action="logout.php" method="POST">
-		<input type="submit" value="logout">
-	</form>
-	
 </body>
 </html>
