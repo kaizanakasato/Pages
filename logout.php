@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(!($_SESSION['login'] == 1))
+	if(!(($_SESSION['login'] == 1) || ($_SESSION['login'] == 2)))
 		header('Location: not.php');
 	
 	$_SESSION = array();

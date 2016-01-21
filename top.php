@@ -36,7 +36,7 @@
 					$userName = $_SESSION['userName'];
 					echo <<< EOM
 						<section class="userName">
-							<h4>{$userName}でログイン</h4>
+							<h4>{$userName} でログイン中</h4>
 							<form action="logout.php" method="POST">
 								<input type="submit" value="ログアウト">
 							</form>
