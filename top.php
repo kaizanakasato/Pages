@@ -1,8 +1,8 @@
 <?php 
 	session_start();
 	
-	if(!($_SESSION['login'] == 1))
-		header('Location: not.html');
+	if(!(($_SESSION['login'] == 1) || ($_SESSION['login'] == 2)))
+		header('Location: not.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,10 @@
 
 <body>
 	<header>
+		<?php
+			if($_SESSION['login'] == 2)
+				echo '<div class="GuestLogin"><p>ゲストアカウントで使用しています。<a href="index.html">ログインする</a></p></div>';
+		?>
 		<img src="logo.png" alt="logo">
 		<h1>YSE-learning</h1>
 		<nav>

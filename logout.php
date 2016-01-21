@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(!($_SESSION['login'] == 1))
-		header('Location: not.html');
+		header('Location: not.php');
 	
 	$_SESSION = array();
 	if(isset($_COOKIE[session_name()]))

@@ -6,15 +6,15 @@
 	<link rel="stylesheet" href="login.css">
 </head>
 <body>
+	<h1>YSE-Learning</h1>
 	<div id="MainPanel">
-		<h1>YSE-Learning</h1>
-		<br>
 		<form id="Login" action="login.php" method="POST">
 			<h2>Login</h2>
-			<input type="textbox" name="email">
-			<input type="password" name="passwd">
+			<input type="textbox" name="userid" required>
+			<input type="password" name="passwd" required>
 			<input type="submit" name="login" value="LOGIN" class="Login">
-			
+		</form>
+		<form action="login.php" method="POST">
 			<input type="submit" name="guest" value="IDのない方はこちら" class="NotID">
 		</form>
 	</div>

@@ -11,10 +11,11 @@ body{
 
 h1{
 	font-size: 42pt;
-	text-align: center;
+	width: 350px;
+	margin: 50px auto;
 }
 
-#Login{
+#MainPanel{
 	width: 350px;
 	margin: auto auto;
 	padding-top: 30px;
