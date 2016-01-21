@@ -166,6 +166,127 @@ aside label input{
     text-decoration: none;
 }
 
+/*top.html*/
+
+#start{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Field1{
+    background-color: #ffffff
+}
+input[type="submit"]{
+    width: 200px;
+    background-color: #000000;
+    background-image: -webkit-gradinet(
+            Liner,
+            Left top,left bottom,
+            from(#ffe7b8),
+            to(#ffd37c));
+    background-image: -webkit-linear-gradient(
+            top,
+            #ffe7b8 0%,
+            #fce2af 100%);
+    background-image: linear-gradient(
+        to bottom,
+        #e5e5e5 0%,
+        #cbcbcb 100%);
+    border: solid 1px #aaaaaa;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    font-size:23px;
+    margin-bottom:40px;
+}
+
+#content p input{
+    padding:3px 10px 3px 10px;
+}
+
+aside label input{
+    width:100px
+}
+
+#SideMenu li a{
+    color:black;
+    text-decoration: none;
+}
+
+footer{
+    width: 950px;
+	margin: auto;  
+}
+
+#Field input{
+    width:30px;
+    margin-left:100px;
+}
+
+#AllSelect {
+    text-align: right
+}
+
+#question1{
+    content:"";
+    display:block;
+    clear:both;
+    text-align: center;
+    padding-bottom:30px}
+
+#question2{
+    content:"";
+    display:block;
+    text-align: center;
+    clear:both;
+    padding:10px 0px}
+
+#select1{
+    width:50%;
+    margin:auto;
+    float:left;    
+}
+
+#select2{
+    width:50%;
+    margin:auto;
+    float:left;    
+}
+
+#select3{
+    width:50%;
+    margin:auto;
+    float:left;    
+}
+
+#Genre{
+    content:"";
+    display:block;
+    clear:both;
+    text-align: center;
+    padding: 10px 0px 40px 0px;
+
+}
+
+#select5{
+    width:33.3333%;
+    margin:auto;
+    float:left;    
+}
+
+#select6{
+    width:33.3333%;
+    margin:auto;
+    float:left;    
+}
+
+#select7{
+    width:33.3333%;
+    margin:auto;
+    float:left;    
+}
+
+/*top.html*/
+
 footer{
     width: 950px;
 	margin: auto;  
