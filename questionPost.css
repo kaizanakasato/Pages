@@ -1,0 +1,59 @@
+body{
+	margin: 0;
+}
+
+header{
+	width: 100%;
+	background: cornflowerblue;
+	padding-top: 20px;
+	box-shadow: 0 3px 3px grey;
+}
+
+header > h1,p{
+	width: 900px;
+	margin: 15px auto;
+	color: white;
+}
+
+table{
+	width: 900px;
+	margin: 25px auto;
+	padding: 0;
+	text-align: center;
+}
+
+th{
+	width: 150px;
+}
+
+td{
+	width: 750px;
+}
+
+/* 各Formパーツ */
+
+input[type="radio"]{
+	display: none;
+}
+
+label{
+	display: block;
+	padding: 15px;
+	float: left;
+	background: darkslategrey;
+	color: lightgrey;
+}
+
+.questionType > label{
+	width: calc(650px/3);
+}
+
+input[type="radio"]:checked + label{
+	background: cornflowerblue;
+	color: white;
+	transition:color ease 0.3s, background ease 0.3s;
+}
+
+textarea{
+	width: 100%;
+}

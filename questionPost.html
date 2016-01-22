@@ -1,0 +1,75 @@
+<!--
+	JSとかAjaxとか使って非同期で送信できたらかっこいいかなと思ったけど工数がでかすぎるのであきらめ
+	時間があったら実装したい…。
+	参考　→　http://ginpen.com/2013/05/07/jquery-ajax-form/
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>問題投稿</title>
+	<link rel="stylesheet" href="questionPost.css">
+	<!--<script type="text/javascript" src="questionUp.js"></script>-->
+</head>
+<body>
+	<header>
+		<h1>問題投稿専用ページ</h1>
+		<p>YSE-Learningにて使用する問題を投稿させる専用フォームです。</p>
+	</header>
+	<div class="QuestionPost">
+		<form action="questionPost.php" method="POST">
+			<table border="0">
+				<tr>
+					<th>問題種類</th>
+					<td class="questionType">
+						<input type="radio" name="queType" id="radioIp" value="ip">
+							<label for="radioIp">ITパスポート</label>
+						<input type="radio" name="queType" id="radioFea" value="fea">
+							<label for="radioFea">基本情報技術者試験午前免除</label>
+						<input type="radio" name="queType" id="radioTeach" value="teach">
+							<label for="radioTeach">授業</label>
+					</td>
+				</tr>
+					<th>出題年</th>
+					<td><input type="number" name="year" min="16" max="99" value="27"></td>
+				</tr>
+				<tr>
+					<th>出題時期</th>
+					<td>
+						<label for="radioSpring"><input type="radio" name="season" id="radioSpring" value="spring">春</label>
+						<label for="radioAutumn"><input type="radio" name="season" id="radioAutumn" value="autumn">秋</label>
+					</td>
+				</tr>
+				<tr>
+					<th>問題文</th>
+					<td><textarea name="questionText" id="queText" cols="30" rows="10"></textarea></td>
+				</tr>
+				<tr>
+					<th>解答</th>
+					<td>
+						<input type="text" id="ansText1">
+						<input type="text" id="ansText2">
+						<input type="text" id="ansText3">
+						<input type="text" id="ansText4">
+					</td>
+				</tr>
+				<tr>
+					<th>正解</th>
+					<td>
+						<label for="radioAnswer1"><input type="radio" name="answer" id="radioAnswer1" value="answer1"></label>
+						<label for="radioAnswer2"><input type="radio" name="answer" id="radioAnswer2" value="answer2"></label>
+						<label for="radioAnswer3"><input type="radio" name="answer" id="radioAnswer3" value="answer3"></label>
+						<label for="radioAnswer4"><input type="radio" name="answer" id="radioAnswer4" value="answer4"></label>
+					</td>
+				</tr>
+				<tr>
+					<th>解説</th>
+					<td><textarea name="commentary" id="comm" cols="30" rows="10"></textarea></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

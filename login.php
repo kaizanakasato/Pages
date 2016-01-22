@@ -11,12 +11,13 @@
 		if($sqlConn){
 			mysql_select_db('test_Users', $sqlConn);
 			$loginSql = 'select userName from users_tb
-					where userId = "' . $userid . '"
-					and passwd = "' . $passwd . '"';
+						where userId = "' . $userid . '"
+						and passwd = "' . $passwd . '"';
 			
 			$loginQuery = mysql_query($loginSql, $sqlConn);
 		}
 		
+		// IDとPassに一致すれば一件のレコードが入っている
 		if(mysql_num_rows($loginQuery) == 1){
 			$_SESSION['userName'] = mysql_fetch_object($loginQuery)->userName;
 			$_SESSION['login'] = 1;
