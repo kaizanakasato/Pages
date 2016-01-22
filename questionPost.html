@@ -24,7 +24,7 @@
 				<tr>
 					<th>問題種類</th>
 					<td class="questionType">
-						<input type="radio" name="queType" id="radioIp" value="ip">
+						<input type="radio" name="queType" id="radioIp" value="ip" checked>
 							<label for="radioIp">ITパスポート</label>
 						<input type="radio" name="queType" id="radioFea" value="fea">
 							<label for="radioFea">基本情報技術者試験午前免除</label>
@@ -33,13 +33,15 @@
 					</td>
 				</tr>
 					<th>出題年</th>
-					<td><input type="number" name="year" min="16" max="99" value="27"></td>
+					<td><input type="number" name="year" min="16" max="99" value="27">年度</td>
 				</tr>
 				<tr>
 					<th>出題時期</th>
-					<td>
-						<label for="radioSpring"><input type="radio" name="season" id="radioSpring" value="spring">春</label>
-						<label for="radioAutumn"><input type="radio" name="season" id="radioAutumn" value="autumn">秋</label>
+					<td class="season">
+						<input type="radio" name="season" id="radioSpring" value="spring" checked>
+							<label for="radioSpring">春</label>
+						<input type="radio" name="season" id="radioAutumn" value="autumn">
+							<label for="radioAutumn">秋</label>
 					</td>
 				</tr>
 				<tr>
@@ -49,19 +51,21 @@
 				<tr>
 					<th>解答</th>
 					<td>
-						<input type="text" id="ansText1">
-						<input type="text" id="ansText2">
-						<input type="text" id="ansText3">
-						<input type="text" id="ansText4">
+						<div class="ansText">
+							<input type="text" id="ansText1" placeholder="解答1">
+							<input type="text" id="ansText2" placeholder="解答2">
+							<input type="text" id="ansText3" placeholder="解答3">
+							<input type="text" id="ansText4" placeholder="解答4">
+						</div>
 					</td>
 				</tr>
 				<tr>
 					<th>正解</th>
 					<td>
-						<label for="radioAnswer1"><input type="radio" name="answer" id="radioAnswer1" value="answer1"></label>
-						<label for="radioAnswer2"><input type="radio" name="answer" id="radioAnswer2" value="answer2"></label>
-						<label for="radioAnswer3"><input type="radio" name="answer" id="radioAnswer3" value="answer3"></label>
-						<label for="radioAnswer4"><input type="radio" name="answer" id="radioAnswer4" value="answer4"></label>
+						<label for="radioAnswer1"></label><input type="radio" name="answer" id="radioAnswer1" value="answer1">
+						<label for="radioAnswer2"></label><input type="radio" name="answer" id="radioAnswer2" value="answer2">
+						<label for="radioAnswer3"></label><input type="radio" name="answer" id="radioAnswer3" value="answer3">
+						<label for="radioAnswer4"></label><input type="radio" name="answer" id="radioAnswer4" value="answer4">
 					</td>
 				</tr>
 				<tr>
