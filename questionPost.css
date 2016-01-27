@@ -47,6 +47,12 @@ label{
 	color: lightgrey;
 }
 
+label:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
 .questionType > label{
 	box-sizing: border-box;
 	width: calc(750px/3);
@@ -70,17 +76,47 @@ input[type="number"]{
 }
 
 .ansText{
-	width: 730px;
+	width: 740px;	
 	margin: auto;
 }
 
 .ansText > input[type="text"]{
-	width: calc(700px/4);
+	width: calc(680px/4);
+	margin: 0 5px;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 15pt;
+}
+
+.ansSelect{
+	width: 740px;
+	margin: auto;
+}
+
+.ansSelect:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.ansSelect > label{
+	width: calc(680px/4);
+	box-sizing: border-box;
+	margin: 0 7.5px;
 }
 
 textarea{
 	width: 750px;
 	height: 150px;
-	font-size: 18pt;
+	font-size: 15pt;
 	resize: none;
+}
+
+input[type="submit"]{
+	width: 80%;
+	padding: 10px;
+	color: white;
+	background: cornflowerblue;
+	border: none;
+	font-size: 15pt;
 }

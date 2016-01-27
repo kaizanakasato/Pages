@@ -11,12 +11,11 @@
 	<meta charset="UTF-8">
 	<title>問題投稿</title>
 	<link rel="stylesheet" href="questionPost.css">
-	<!--<script type="text/javascript" src="questionUp.js"></script>-->
 </head>
 <body>
 	<header>
 		<h1>問題投稿専用ページ</h1>
-		<p>YSE-Learningにて使用する問題を投稿させる専用フォームです。</p>
+		<p>YSE-Learningにて使用する問題を投稿させる専用フォームです。すべて必須項目です。</p>
 	</header>
 	<div class="QuestionPost">
 		<form action="questionPost.php" method="POST">
@@ -33,7 +32,7 @@
 					</td>
 				</tr>
 					<th>出題年</th>
-					<td><input type="number" name="year" min="16" max="99" value="27">年度</td>
+					<td><input type="number" name="year" min="16" max="99" value="27" required>年度</td>
 				</tr>
 				<tr>
 					<th>出題時期</th>
@@ -46,31 +45,43 @@
 				</tr>
 				<tr>
 					<th>問題文</th>
-					<td><textarea name="questionText" id="queText" cols="30" rows="10"></textarea></td>
+					<td><textarea name="questionText" id="queText" cols="30" rows="10" required></textarea></td>
 				</tr>
 				<tr>
 					<th>解答</th>
 					<td>
 						<div class="ansText">
-							<input type="text" id="ansText1" placeholder="解答1">
-							<input type="text" id="ansText2" placeholder="解答2">
-							<input type="text" id="ansText3" placeholder="解答3">
-							<input type="text" id="ansText4" placeholder="解答4">
+							<input type="text" id="ansText1" placeholder="解答1" required>
+							<input type="text" id="ansText2" placeholder="解答2" required>
+							<input type="text" id="ansText3" placeholder="解答3" required>
+							<input type="text" id="ansText4" placeholder="解答4" required>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<th>正解</th>
 					<td>
-						<label for="radioAnswer1"></label><input type="radio" name="answer" id="radioAnswer1" value="answer1">
-						<label for="radioAnswer2"></label><input type="radio" name="answer" id="radioAnswer2" value="answer2">
-						<label for="radioAnswer3"></label><input type="radio" name="answer" id="radioAnswer3" value="answer3">
-						<label for="radioAnswer4"></label><input type="radio" name="answer" id="radioAnswer4" value="answer4">
+						<div class="ansSelect">
+							<input type="radio" name="answer" id="radioAnswer1" value="answer1" checked>
+								<label for="radioAnswer1">解答1が正解</label>
+							<input type="radio" name="answer" id="radioAnswer2" value="answer2">
+								<label for="radioAnswer2">解答2が正解</label>
+							<input type="radio" name="answer" id="radioAnswer3" value="answer3">
+								<label for="radioAnswer3">解答3が正解</label>
+							<input type="radio" name="answer" id="radioAnswer4" value="answer4">
+								<label for="radioAnswer4">解答4が正解</label>
+						</div>
 					</td>
 				</tr>
 				<tr>
 					<th>解説</th>
-					<td><textarea name="commentary" id="comm" cols="30" rows="10"></textarea></td>
+					<td><textarea name="commentary" id="comm" cols="30" rows="10" required></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="送信" onclick='return confirm("以下の内容でよろしいですか？");'>
+					</td>
 				</tr>
 			</table>
 		</form>
