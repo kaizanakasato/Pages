@@ -76,5 +76,5 @@
 			echo 'true';
 		}
 	echo mysql_error($sqlConn);
-	// Header('Location:questionPostIndex.php');
+	Header('Location:questionPostIndex.php');
 ?>
