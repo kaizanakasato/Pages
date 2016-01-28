@@ -11,10 +11,11 @@
 		$roopValue_queType[0] = 'checked';
 		$roopValue_queType[1] = '';
 		$roopValue_queType[2] = '';
-		echo 'not found roopValue';
+		$roopValue_year = 27;
 	}else if(isset($_SESSION['roopValue'])){
 		$roopValue_queType = $_SESSION['roopValue_queType'];
-		echo 'found roopValue';
+		$roopValue_year = $_SESSION['roopValue_year'];
+		$roopValue_season = $_SESSION['roopValue_season'];
 	}
 ?>
 
@@ -46,7 +47,7 @@
 				</tr>
 					<th>出題年 / 問題番号</th>
 					<td>
-						<input type="number" name="year" min="16" max="99" value="27" required>年度
+						<input type="number" name="year" min="16" max="99" value="<?php echo $roopValue_year?>" required>年度
 						<span class="numSlash">/</span>
 						第<input type="number" name="queNum" min="1" max="100" value="1" required>問
 					</td>
@@ -54,9 +55,9 @@
 				<tr>
 					<th>出題時期</th>
 					<td class="season">
-						<input type="radio" name="season" id="radioSpring" value="spring" checked>
+						<input type="radio" name="season" id="radioSpring" value="spring" <?php echo $roopValue_season[0]?>>
 							<label for="radioSpring">春</label>
-						<input type="radio" name="season" id="radioAutumn" value="autumn">
+						<input type="radio" name="season" id="radioAutumn" value="autumn" <?php echo $roopValue_season[1]?>>
 							<label for="radioAutumn">秋</label>
 					</td>
 				</tr>

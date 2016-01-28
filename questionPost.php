@@ -38,6 +38,10 @@
 	// printf($answer); echo "<br>";
 	// printf($commentary); echo "<br>";
 	
+	
+	// ------------------------------------------------------------
+	$_SESSION['roopValue'] = 1;
+	
 	if($queType == 'ip'){
 		$roopValue_queType[0] = 'checked';
 		$roopValue_queType[1] = '';
@@ -51,8 +55,16 @@
 		$roopValue_queType[1] = '';
 		$roopValue_queType[2] = 'checked';
 	}
-	$_SESSION['roopValue'] = 1;
 	$_SESSION['roopValue_queType'] = $roopValue_queType;
+	$_SESSION['roopValue_year'] = $year;
+	if($season == 'spring'){
+		$roopValue_season[0] = 'checked';
+		$roopValue_season[1] = '';
+	}else if($season == 'autumn'){
+		$roopValue_season[0] = '';
+		$roopValue_season[1] = 'checked';
+	}
+	$_SESSION['roopValue_season'] = $roopValue_season;
 	
 	$sqlConn = mysql_connect('localhost', 'questionWorker', 'test');
 	mysql_set_charset("utf8",$sqlConn);
