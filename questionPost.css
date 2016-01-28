@@ -65,9 +65,13 @@ input[type="radio"]:checked + label{
 }
 
 input[type="number"]{
-	text-align: center;
+	text-align: right;
 	font-size: 14pt;
-	
+	width: 50px;
+}
+
+.numSlash{
+	margin: 0 20px;
 }
 
 .season > label{

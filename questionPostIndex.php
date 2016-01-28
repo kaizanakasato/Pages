@@ -3,7 +3,20 @@
 	時間があったら実装したい…。
 	参考　→　http://ginpen.com/2013/05/07/jquery-ajax-form/
 -->
-
+<?php
+	session_start();
+	
+	
+	if(!isset($_SESSION['roopValue'])){
+		$roopValue_queType[0] = 'checked';
+		$roopValue_queType[1] = '';
+		$roopValue_queType[2] = '';
+		echo 'not found roopValue';
+	}else if(isset($_SESSION['roopValue'])){
+		$roopValue_queType = $_SESSION['roopValue_queType'];
+		echo 'found roopValue';
+	}
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -23,16 +36,20 @@
 				<tr>
 					<th>問題種類</th>
 					<td class="questionType">
-						<input type="radio" name="queType" id="radioIp" value="ip" checked>
+						<input type="radio" name="queType" id="radioIp" value="ip" <?php echo $roopValue_queType[0];?>>
 							<label for="radioIp">ITパスポート</label>
-						<input type="radio" name="queType" id="radioFea" value="fea">
+						<input type="radio" name="queType" id="radioFea" value="fea" <?php echo $roopValue_queType[1];?>>
 							<label for="radioFea">基本情報技術者試験午前免除</label>
-						<input type="radio" name="queType" id="radioTeach" value="teach">
+						<input type="radio" name="queType" id="radioTeach" value="teach" <?php echo $roopValue_queType[2];?>>
 							<label for="radioTeach">授業</label>
 					</td>
 				</tr>
-					<th>出題年</th>
-					<td><input type="number" name="year" min="16" max="99" value="27" required>年度</td>
+					<th>出題年 / 問題番号</th>
+					<td>
+						<input type="number" name="year" min="16" max="99" value="27" required>年度
+						<span class="numSlash">/</span>
+						第<input type="number" name="queNum" min="1" max="100" value="1" required>問
+					</td>
 				</tr>
 				<tr>
 					<th>出題時期</th>
