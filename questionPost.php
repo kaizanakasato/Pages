@@ -71,9 +71,10 @@
 	if($sqlConn){
 			mysql_select_db('test_question', $sqlConn);
 			$loginSql = 'insert into temp_questions(QuestionType, Year, Season, QuestionNumber, QuestionText, AnswerText0, AnswerText1, AnswerText2, AnswerText3, Answer, Commentary)
-						 values ("'.$queType.'", "'.$year.'", "'.$season.'", "'.$queNum.'" "'.$questionText.'", "'.$answerText[0].'", "'.$answerText[1].'", "'.$answerText[2].'", "'.$answerText[3].'", "'.$answer.'", "'.$commentary.'");';
+						 values ("'.$queType.'", "'.$year.'", "'.$season.'", "'.$queNum.'", "'.$questionText.'", "'.$answerText[0].'", "'.$answerText[1].'", "'.$answerText[2].'", "'.$answerText[3].'", "'.$answer.'", "'.$commentary.'");';
 			$loginQuery = mysql_query($loginSql, $sqlConn);
-			Header('Location:questionPostIndex.php');
+			echo 'true';
 		}
 	echo mysql_error($sqlConn);
+	// Header('Location:questionPostIndex.php');
 ?>
