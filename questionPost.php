@@ -20,6 +20,23 @@
 	$answer = htmlspecialchars($_POST['answer'],ENT_QUOTES);
 	$commentary = htmlspecialchars($_POST['commentary'],ENT_QUOTES);
 	
+	// // 画像処理$imgFlag = 1;
+	// 	$fname = $_FILES['uploadFile']['name'];
+	// 	move_uploaded_file($_FILES['uploadFile']['tmp_name'],'img/'.$fname);
+	
+	if(is_uploaded_file($_FILES['uploadFile']['tmp_name'])){
+		
+	}else{
+		echo 'Not found file.';
+	}
+	
+	if(isset($_FILES['uploadFile']['name'])){
+		}
+	else
+		$imgFlag = 0;
+	
+	
+	
 	// 改行処理
 	$questionText = nl2br($questionText);
 	for($i=0; $i<4; $i++)
@@ -66,15 +83,15 @@
 	}
 	$_SESSION['roopValue_season'] = $roopValue_season;
 	
-	$sqlConn = mysql_connect('localhost', 'questionWorker', 'test');
-	mysql_set_charset("utf8",$sqlConn);
-	if($sqlConn){
-			mysql_select_db('test_question', $sqlConn);
-			$loginSql = 'insert into temp_questions(QuestionType, Year, Season, QuestionNumber, QuestionText, AnswerText0, AnswerText1, AnswerText2, AnswerText3, Answer, Commentary)
-						 values ("'.$queType.'", "'.$year.'", "'.$season.'", "'.$queNum.'", "'.$questionText.'", "'.$answerText[0].'", "'.$answerText[1].'", "'.$answerText[2].'", "'.$answerText[3].'", "'.$answer.'", "'.$commentary.'");';
-			$loginQuery = mysql_query($loginSql, $sqlConn);
-			echo 'true';
-		}
+	// $sqlConn = mysql_connect('localhost', 'questionWorker', 'test');
+	// mysql_set_charset("utf8",$sqlConn);
+	// if($sqlConn){
+	// 		mysql_select_db('test_question', $sqlConn);
+	// 		$loginSql = 'insert into temp_questions(QuestionType, Year, Season, QuestionNumber, QuestionText, AnswerText0, AnswerText1, AnswerText2, AnswerText3, Answer, Commentary)
+	// 					 values ("'.$queType.'", "'.$year.'", "'.$season.'", "'.$queNum.'", "'.$questionText.'", "'.$answerText[0].'", "'.$answerText[1].'", "'.$answerText[2].'", "'.$answerText[3].'", "'.$answer.'", "'.$commentary.'");';
+	// 		$loginQuery = mysql_query($loginSql, $sqlConn);
+	// 		echo 'true';
+	// 	}
 	echo mysql_error($sqlConn);
-	Header('Location:questionPostIndex.php');
+	// Header('Location:questionPostIndex.php');
 ?>

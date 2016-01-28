@@ -12,6 +12,8 @@
 		$roopValue_queType[1] = '';
 		$roopValue_queType[2] = '';
 		$roopValue_year = 27;
+		$roopValue_season[0] = 'checked';
+		$roopValue_season[1] = '';
 	}else if(isset($_SESSION['roopValue'])){
 		$roopValue_queType = $_SESSION['roopValue_queType'];
 		$roopValue_year = $_SESSION['roopValue_year'];
@@ -25,6 +27,33 @@
 	<meta charset="UTF-8">
 	<title>問題投稿</title>
 	<link rel="stylesheet" href="questionPost.css">
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<script>
+		$(function() {
+			$('input[type=file]').after('<br><span class="imgPreview"></span>');
+
+			// アップロードするファイルを選択
+			$('input[type=file]').change(function() {
+				var file = $(this).prop('files')[0];
+
+				// 画像以外は処理を停止
+				if (! file.type.match('image.*')) {
+				// クリア
+				$(this).val('');
+				$('.imgPreview').html('');
+				return;
+				}
+
+				// 画像表示
+				var reader = new FileReader();
+				reader.onload = function() {
+				var img_src = $('<img>').attr('src', reader.result);
+				$('.imgPreview').html(img_src);
+				}
+				reader.readAsDataURL(file);
+			});
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -94,6 +123,14 @@
 				<tr>
 					<th>解説</th>
 					<td><textarea name="commentary" id="comm" cols="30" rows="10" required></textarea></td>
+				</tr>
+				<tr>
+					<th>画像ファイル</th>
+					<td>
+						<form enctype="multipart/form-data" method="post">
+							<input type="file" name="uploadFile">
+						</form>
+					</td>
 				</tr>
 				<tr>
 					<td></td>
