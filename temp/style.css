@@ -1,33 +1,56 @@
+@font-face{
+	font-family: 'IPAexG';
+	src: url(../fonts/IPAEXG.TTF);
+}
+
 body{
-    font-family:  'メイリオ',
-    'Hiragio Kaku Gothic Pro',
-    sans-serif;
+	font-family: 'IPAexG';
     background-color: #fffffc;
+	margin: 0;
+	font-size: 14pt;
 }
 
 h1{
+	margin: 0;
 	line-height: 50px;
 }
 
-header > img{
+.title{
+	width: 950px;
+	margin: auto;
+	padding: 10px;
+}
+
+h3,h4{
+    margin-bottom: 20px; 
+    padding: 5px 0px 5px 10px;
+    background-color: #a5bbf4;
+    border-radius: 5px
+}
+
+header > .title > a > img{
 	width: 80px;
 	height: 50px;
+	line-height: 50px;
 	box-sizing: border-box;
 	border: solid 2px grey;
 	float: left;
 	margin-right: 20px;
 }
 
-h3,h4{
-	margin-bottom: 20px; 
-    padding: 5px 0px 5px 10px;
-    background-color: #a5bbf4;
-    border-radius: 5px
-}
 
 header{
-    width: 950px;
-    margin: 10px auto;
+    width: 100%;
+	background: cornflowerblue;
+	color: white;
+	margin-bottom: 15px;
+	box-shadow: 0 3px 3px grey;
+}
+
+header > .title > a{
+	text-decoration: none;
+	color: white;
+	font-size: 16pt;
 }
 
 footer{
@@ -38,26 +61,18 @@ footer{
 
 /*ナビゲーションメニュー*/
 nav ul{
+    width:950px;
     list-style-type: none;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left:0px;
-    margin-bottom: 10px
+    margin: 0 auto;
 }
 
 nav li{
     display: inline;
     padding: 0px 60px 0px 60px;
     background-color: #f0f8ff;
-    background-image: -webkit-gradinet(
-		Liner,
-		Left top,left bottom,
-		from(#ffffff),
-		to(#cfeeff));
-    background-image: -webkit-linear-gradient(
-		top,
-		#ffffff 0%,
-		#cfeeff 100%);
     background-image: linear-gradient(
         to bottom,
         #ffffff 0%,
@@ -75,11 +90,12 @@ nav a{
 /*コンテンツ枠*/
 article{
     background-color: #ffffff;
-    width:600px;
+    width:680px;
 	margin: 0 auto 25px auto;
-    border:solid 1px #000000;
-    padding: 20px 55px 20px 20px;
-    border-radius: 15px
+    border:solid 3px lightgrey;
+    padding: 10px;
+    border-radius: 15px;
+	box-sizing: border-box;
 }
 
 
@@ -101,29 +117,30 @@ article{
 
 #SideMenu section{
     background-color: #ffffff;
-    border: solid 1px #aaaaaa;
+    border: solid 3px lightgrey;
 	padding: 0;
-    margin: 0px 0px 20px 0px;
-    border-radius: 15px
+    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 #SideMenu > section > h4{
 	margin: 0;
+	border: none;
 	border-radius: 0;
-	border-top-left-radius: 14px;
-	border-top-right-radius: 14px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
 } 
 
 #SideMenu > section > ul{
 	padding: 0;
 	text-align: center;
 	width: 230px;
-	margin: 0 auto;
+	margin: 5px auto;
 }
 
 #SideMenu > section > ul > li{
 	list-style-type: none;
-	margin: 4px 0;
+	margin: 6px 0;
 }
 
 
@@ -131,26 +148,41 @@ article{
 	margin-left: 10px;
 }
 
+#content p input{
+    padding:3px 10px 3px 10px;
+}
+
+aside label input{
+    width:100px;
+}
+
+#SideMenu li a{
+    color:black;
+    text-decoration: none;
+}
+
+/*top.html*/
+
+#start{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Field1{
+    background-color: #ffffff
+}
 input[type="submit"]{
-    width: 80px;
-    margin: 0px 0px 0px 0px;
-    background-color: #ffaa00;
-    background-image: -webkit-gradinet(
-            Liner,
-            Left top,left bottom,
-            from(#ffe7b8),
-            to(#ffaa00));
-    background-image: -webkit-linear-gradient(
-            top,
-            #ffe7b8 0%,
-            #ffaa00 100%);
+    width: 200px;
+    background-color: #000000;
     background-image: linear-gradient(
         to bottom,
-        #ffe7b8 0%,
-        #ffaa00 100%);
+        #e5e5e5 0%,
+        #d0d0d0 100%);
     border: solid 1px #aaaaaa;
     border-radius: 5px;
-    padding: 5px 10px 5px 10px
+    padding: 10px 20px 10px 20px;
+    font-size:23px;
+    margin-bottom:40px;
 }
 
 #content p input{
@@ -161,13 +193,308 @@ aside label input{
     width:100px
 }
 
-#SideMenu li a{
-    color:black;
+
+/* 問題一覧ページ */
+table,th,td{
+    border: solid 1px #aaaaaa
+}
+
+table{
+    border-collapse: collapse
+}
+
+th,td{
+    padding: 10px 20px 10px 20px
+}
+
+th{
+    width: auto
+}
+
+td{
+    width: auto
+}
+h2{
+    background-color: #a5bbf4;
+	width: 654px;
+	margin: 0 auto 10px auto;
+	padding: 5px; 
+	box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/*著作権ページ*/
+.ital{
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.red{
+    color: #ff0000
+}
+/*著作権ページ*/
+
+
+/*SiteMap*/
+
+#MainContents h5{
+    font-size:20px;
+    width:600px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#MainContents h3{
+    background-color: #9ebde8;
+    width:auto;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+}
+/*
+#MainContents h2{
+    font-size:36px;
+    padding-left:20px;
+}
+*/
+#MainContents a{
+    color:#244057;
     text-decoration: none;
 }
 
+#MainContents a:visited{
+    color:#8f3da7;
+}
 
-footer{
-    width: 950px;
-	margin: auto;  
+#MainContents a:hover{
+    color:#4688c1;
+}
+
+#MainContents a:active {
+    color:#1c3245;
+}
+
+/*SiteMap*/
+
+/* TOPページ */
+.Field{
+    text-align: center;
+}
+
+.select{
+    display: flex;
+    justify-content: space-around;
+}
+
+.allselect{
+    width: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content;
+    flex-direction: row-reverse
+}
+
+.Genre{
+    width: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* TOPページ */
+
+/* My Page */
+/*
+.Performance{
+    width: auto;    
+}
+
+.row h3{
+    background: skyblue;
+    color: white;
+    text-align: center
+}
+
+.row p{
+    text-align: center;
+    font-size: 60px;
+    color: green
+}
+
+.row{
+    width:auto;
+    margin: auto 0;
+}
+*/
+
+.row1{
+    font-size: 70px;
+    text-align: center;
+}
+
+.row{
+    width: auto;
+    margin: 10px auto;
+}
+
+.row > h3{
+    display: block;
+    background: skyblue;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    padding: 5px;
+    margin: 20p;
+    font-size: 18pt;
+}
+
+.row > p{
+    text-align: center;
+    font-size: 60pt;
+    color: green;
+    margin: 0;
+    line-height: 60px;
+}
+
+.My_Genre{
+    width: auto;    
+    display: block;
+}
+
+.My_Genre > .row{
+    width: auto;
+}
+
+.My_Genre > .row > p{
+    font-size: 35pt;
+}
+
+/* UserName */
+
+.userName > form > input{
+	display: block;
+	width: 200px;
+	padding: 15px;
+	margin: 10px auto;
+	color: ghostwhite;
+	box-shadow: 0 0 0 black;
+	border: none;
+	border-radius: 8px;
+	background: none;
+	-webkit-appearance:none;
+	background: #a5bbf4;
+}
+
+/* My Page*/
+
+/* ウィンドウ幅が949px以下の場合に適応するCSS */
+@media screen and (max-width: 949px){
+    
+    header{
+        width:auto;
+    }
+    
+/* 段組みにさせる為の全体図 */
+    #Middle{
+        width:auto;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+    
+    #MainContents{
+        width: auto;
+    }
+    
+    article{
+        width:auto;
+    }
+    
+/* サイドメニュー */
+    #SideMenu{
+        width:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #SideMenu section{
+        width:auto;
+        margin-bottom: 10px;
+    }
+    
+/* ナビゲーションメニュー */
+    nav{
+        width:100%;
+        margin-bottom: 30px;
+    }
+    
+    nav ul{
+        width:auto;        
+    }
+    
+    nav li{
+        width:auto;
+        text-align: center;
+        box-sizing: border-box;
+        padding:20px 25px;
+        margin-left:0px;
+    }
+    
+/* フッター */
+    footer{
+        position: absolute;
+        width:100%;
+    }
+}
+
+/* ウィンドウ幅が375px以下の場合に適応するCSS */
+@media(max-width: 375px){
+
+    header{
+        width:auto;
+    }
+
+    /* 段組みにさせる為の全体図 */
+    #Middle{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    
+    #MainContents{
+        width: auto;
+    }
+    article{
+        width:auto;
+    }
+
+/* サイドメニュー */
+    #SideMenu{
+        width: 100%;
+    }
+
+
+/* ナビゲーションメニュー */
+    nav{
+        width:auto;
+    }
+    
+    nav ul{
+        width:auto;
+        display: flex;
+        flex-direction:column
+    }
+    
+    nav li{
+        width:auto;
+        text-align: center;
+        display: block;
+        margin:10px;
+    }
+/* フッター */
+    footer{
+        width:auto;
+        text-align: center
+    }
+
 }

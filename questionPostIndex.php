@@ -2,10 +2,14 @@
 	JSとかAjaxとか使って非同期で送信できたらかっこいいかなと思ったけど工数がでかすぎるのであきらめ
 	時間があったら実装したい…。
 	参考　→　http://ginpen.com/2013/05/07/jquery-ajax-form/
+	
+	01/29
+	画像ファイルのアップロードに対応させたいけど、questionPost.php側で受け取れない
+	一旦、そちらの作成は中断する
 -->
+
 <?php
 	session_start();
-	
 	
 	if(!isset($_SESSION['roopValue'])){
 		$roopValue_queType[0] = 'checked';
